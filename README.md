@@ -6,7 +6,7 @@ This repository contains a R script and related files to be used in Geography/So
 
 Based on research funded by the National Science Foundation, grant BCS-1263582.
 
-The SoilR package was developed by Carlos A. Sierra and Markus Mueller, <a href="https://cran.rstudio.com/web/packages/SoilR/SoilR.pdf" target="_blank" </a>
+The SoilR package was developed by Carlos A. Sierra and Markus Mueller, https://cran.rstudio.com/web/packages/SoilR/SoilR.pdf
 
 References for SoilR:
 Sierra, C.A., Muller, M., and Trumbore, S.E. 2012. Models of soil organic matter decomposition: the SOILR package, version 1.0. Geoscience Model Development 5:1045-1060.
