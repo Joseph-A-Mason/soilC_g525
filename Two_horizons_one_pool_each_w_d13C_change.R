@@ -38,6 +38,16 @@ Nk<-vector(length=2)
 Nk[1]<-Ok[1]
 Nk[2]<-Ok[2]
 
+#Input factor (default value = 1.0). In this model, the input of SOC from roots and leaf 
+#litter is calculated to produce a steady state of SOC, based on the
+#initial SOC inventory. However, if you want you can reduce or
+#increase the input factor to represent change in vegetation or
+#environmental conditions. For example, you could make the factor 0.8
+#to represent the assumption that input from forest vegetation is 80%
+#of input from prairie vegetation
+In_factor<-1.0
+
+
 #obsd13C is a list of the observed (modern) values of d13C (normalized
 #ratio of 13C to 12C) in H1 and H2, in that order. You should change these
 #if you use a profile other than P98. Values for other profiles are in the
@@ -118,7 +128,7 @@ SlopeC14t<-c(-0.003, -0.008, -0.003, -0.008)
 #if you are interested, of course)
 
 #Root input from new and old vegetation (old is typically zero but doesn't have to be)
-NRootIn<-c((-1.0*Ok[1]*OCinv[1]),(-1.0*Ok[2]*OCinv[3]))
+NRootIn<-c((In_factor*-1.0*Ok[1]*OCinv[1]),(In_factor*-1.0*Ok[2]*OCinv[3]))
 ORootIn<-c(0,0)
 
 #timescale for simulation
